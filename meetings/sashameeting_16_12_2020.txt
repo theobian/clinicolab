@@ -1,0 +1,9 @@
+sasha:
+click on shapley dot and have the same patient with LIME 
+LIME: orient on the same way as SHAP, same ordering of features, etc
+be able to explain lasso better jesus
+bin scoring thing: useful in certain cases:: should specify if accuracy isnt good = not a good choice
+(you can sort of see that from the graph itself)
+make things more simple but add as many visualization tools as possible!
+characterize patients within each severity score bin: feature importance, etc...
+have more slides about the graphs interpretation! that's the most important

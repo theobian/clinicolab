@@ -1,0 +1,9 @@
+- besoin d un certain niveau de base
+- exemples concrets applique a la medecine
+- quel model choisir, quand, pourquoi, pour quel genre de pb
+
+- prepare: the annie triage figure
+- a more precise intro of platform: for whom, what, why, how
+- prepare: a snapshot of what an input dataset looks like
+- have some more interpreation stuff
+- ready SHAP stuff and LIME stuff

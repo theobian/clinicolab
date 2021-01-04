@@ -1,0 +1,26 @@
+explain validation and training sets!!!!
+show which percentage was taken from it
+
+
+temprature: sometimes its best to have it be binned instead of continuous.... 
+
+
+every warning sign possible for people not knowledgeable about statistics!!! you can misinterpret everything
+
+likelihood ratio
+sensi specs odds ratio
+relative risk odds ratio AND THEN associate it with featurs importance
+You NEED to understand the individual value of these predictors
+models information
+
+unadjusted prediction value of predictors then have multivariate analysis and see how the model adjusted to that: then have adjusted odds ratio
+un adjusted and adjusted odds ratio and p value
+idv predictors = features
+give info on hoe the features are : categorical numerical etc
+can i dichotomize this or can I categorize this data before using it on the model
+
+for example : temp. can we categorize it as just high and low instead of the actual numerical value
+
+
+best for features odda ratio with CI and p value
+all results in table

@@ -1,0 +1,39 @@
+meeting_with_annie_27_11_2020
+
+FOCUS ON DJANGO
+
+antoine
+- what to do : include ALE plots
+
+thesismid presentation
+find a time + prepare a presentation
+
+rihda: EIXUZQ: in the midst of the pandemic, crazy stuff, so will be less perfect dataset but its still good for comparison
+should just get his cleaned version of a dataset
+
+focus on django and focus on 
+
+diiive into interpretability! make sure you're really good at interpreting stuff and understanding interpretability of machine learning
+go into the theory! the risk of the thesis: make 1 graph or two and this is nice. but needs the academic background.
+it needs to be an investigation, it needs to be explained / reasoned. need to have pros and cons. It's not a report, 
+it's an academic report! critical overview of both the state-of-the-art and on the work that I have done.
+decisional process! needs to be understandable why we go from one part to another. for example, go from accuracy to pdp plots to ale plots to etc..
+
+
+
+thesis writing:
+
+scientific writing:
+- organize thoughts: have tables, have subheadings, summarize things, have conclusions. needs to have a point. 
+- argument: always trying to present both sides + eventually win the argument  / prove one of them right/ wrong
+- really think about a section as heading + subheadings, to show what you know and have the academic part of the report be "seen"
+
+background: overview
+introduction: explain the setting 
+then deep dive!
+
+have a section for the survey: qualitative part of the study (not 100s of answers), talk about the process, the structures, the concerns that came 
+up from the doctors answering that, the needs, and our responses + what we should do + what we can't do.
+
+
+presentation: train vs test: but what is training ?:p

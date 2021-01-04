@@ -1,0 +1,75 @@
+meeting annie 18-12-2020
+
+We can't really do the machine learning model comparison yet... 
+on the platform , there is something wrong, the results are not great at all.
+The fix Antoine attempted didnt seem to do much.
+For comparison, the results i obtain 
+Random forest: simple 
+accuracy 0.9460122699386503 
+precision 0.8245614035087719 
+recall 0.9096774193548387
+Only feature processing = minmax scaling, which is supposed to be done on the platform as well
+When selecting the same features, the results are more like
+89
+2.1
+60.0
+which is terrible because the label class is very unbalanced (at least like 3:1?)
+trying to find the bug but... tough
+
+For now. wrote first parts, and a result part 
+even though it is very messy, some stuff there. I ll continue to substitute and have
+better looking sentences
+
+django: on hold. I can add stuff that is just displayed there, but ... 
+im spending too much time on it. I dont want it to be that much a part of my thesis...
+like at the expense of the rest. I know it is important though, so ill continue working...
+on it but I want to do some machine learning model stuff as well
+
+
+more functionalities: focus on being able to get information from bin or one point 
+and investigate further: sort of granular explanation.
+
+
+ml stuff
+- basically already did the tree forest comparison, need to do NN, NBB and LR
+- even if the comparison point is off, some results to be used for later.
+
+spoke with sasha, she seemed pleased. interested in the platform
+very intersted in the tools i will describe to you
+the binning stuff is good. Says maybe we need to display ONLY if model is good
+but i think that should be up to the user to decide
+
+still havent got a response from the two rwandan doctors, ill contact them again
+were not on passive-agressive discussion, i really think they just forgot / have 
+too much work
+
+will speak to valerie on the 7th of january so that's one more. 
+
+need to speak to ludovico to get the feedback survey
+
+need to investigate rainer's papers more
+
+
+
+
+
+AFTER MEETING
+["date_season_meteo", "dem_age_int", "dem_sex", "lab_malaria_any_d0", "sign_pallor", "signv_temp_d0", \
+	"symp_abdopain", "symp_cough", "symp_diarrhea", "symp_feveronly", "symp_fev24h", "symp_vomit", "signv_rr1_d0", "days_of_fever"]
+
+
+
+
+
+- instaed of malaria_any choose malaria high and also compare it with malaria low and malaria rdt
+
+- look into the integer rounding
+
+
+- epoct comparison with another dataset
+
+- akss ridha: for a cleaned dataset to do the same thing and compare 
+
+
+
+overleaf -- check into epfl account 

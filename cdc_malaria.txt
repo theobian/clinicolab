@@ -1,0 +1,54 @@
+https://www.cdc.gov/malaria/malaria_worldwide/reduction/vaccine.html#:~:text=The%20development%20of%20a%20malaria,immune%20response%20to%20malaria%20infection.
+cdcBarriers to Developing a Malaria Vaccine
+
+Although progress has been made in the last 10 years toward developing malaria vaccines, there is currently no licensed malaria vaccine on the market.
+
+Barriers to Developing a Malaria Vaccine
+The development of a malaria vaccine has faced several obstacles: the lack of a traditional market, few developers, and the technical complexity of developing any vaccine against a parasite.
+
+Malaria parasites have a complex life cycle, and there is poor understanding of the complex immune response to malaria infection. Malaria parasites are also genetically complex, producing thousands of potential antigens. Unlike the diseases for which we currently have effective vaccines, exposure to malaria parasites does not confer lifelong protection. Acquired immunity only partially protects against future disease, and malaria infection can persist for months without symptoms of disease.
+
+Diagnosis and Treatment of Malaria in the Malaria-Endemic World
+Malaria must be diagnosed and treated promptly with a recommended antimalarial drug to keep the illness from progressing and to help prevent further spread of infection in the community.
+
+In the malaria-endemic world, diagnosis of malaria can be difficult for several reasons:
+
+Malaria’s clinical symptoms are shared with other diseases and conditions, and many malaria-endemic countries lack resources, such as microscopes and rapid diagnostic tests (RDTs), to make a definitive diagnosis.
+Health personnel in these areas are often undertrained, underequipped and underpaid.
+Health personnel in the malaria-endemic world often face excessive patient loads, and must divide their attention between malaria and other equally severe infectious diseases such as pneumonia, diarrhea, tuberculosis, and HIV/AIDS.
+Malaria may be “uncomplicated” or “severe.”
+
+Uncomplicated malaria: Symptoms may include fever, chills, sweats, headaches, muscle pains, nausea and vomiting.
+Severe malaria: Symptoms may include confusion, coma, focal neurologic signs, severe anemia, and respiratory difficulties. A patient with symptoms of severe malaria should be assessed quickly and treated immediately. Severe malaria is most often caused by the most dangerous parasite, Plasmodium falciparum.
+
+Diagnosis of Malaria
+When a patient with fever is brought to a health facility in the malaria-endemic world, a health worker may suspect that the patient has malaria based on the patient’s symptoms, although these symptoms are not specific to malaria. For many years, national malaria control programs recommended treating children under 5 years with fever for malaria, based on symptoms alone, because most health facilities did not have working microscopes, a trained microscopist, and necessary equipment (e.g., slides, stains) to perform a laboratory test. Malaria was extremely common and potentially fatal, and providing treatment based on clinical diagnosis alone could save the child’s life. However, if the child had an illness other than malaria, it would go untreated.
+
+As malaria interventions have been scaled up in sub-Saharan Africa in the last decade, rapid diagnostic tests for malaria have become available in health facilities, microscopes have been provided, and microscopists have been trained.
+
+In 2010, the World Health Organization recommended that all suspected cases of malaria be confirmed with a diagnostic test prior to treatment. The Roll Back Malaria Partnership has set new targets of universal access to malaria diagnostic testing in public and private sectors as well as at the community level. In many countries, community health workers (CHWs) have been trained on integrated community case management of common childhood illnesses, including malaria, pneumonia, and diarrhea. Many CHWs are being trained to use rapid diagnostic tests for febrile children and to treat them with recommended antimalarials if they are positive.
+
+Rapid Diagnostic Tests
+Over the last fifteen years, test kits have become available that can detect antigens derived from malaria parasites in a person’s blood. These immunologic (“immunochromatographic”) tests are referred to as RDTs  and provide results quickly—depending on the test, in about 20 minutes.
+
+
+RDTs’ Importance in Diagnosis and Treatment in the Malaria-Endemic World
+RDTs offer a useful alternative to microscopy in situations where reliable microscopic diagnosis is not available. Malaria RDTs are currently used in many clinical settings and programs in countries where malaria is transmitted. CDC and others are conducting operational research to help optimize their use.
+
+Patients who have uncomplicated malaria can be treated on an outpatient basis; however, patients with severe malaria should be hospitalized.
+
+
+
+Malaria RDTs are being widely used in malaria-endemic countries, but the use of an RDT does not completely eliminate the need for malaria microscopy.
+
+Because RDTs may not be able to detect some infections with lower numbers of malaria parasites in the patient’s blood and the less common species of malaria, P. ovale and P. malariae, in the malaria-endemic world,
+
+Patients with negative RDT results can be followed up by microscopy where available to confirm the result.
+Patients with positive RDT results who are not responding to initial antimalarial treatment should be evaluated for other causes of their symptoms to determine whether the treatment was appropriate and to examine parasites in the blood by microscopy to determine the possibility of drug resistance.
+
+Test Performance and Cost: For RDTs to be optimally useful, the tests must perform well. At this time, product testing has shown that some tests on the market perform much better than others. In addition, care must be taken during transport and storage of RDTs. High temperatures and high humidity in particular can contribute to poor performance. The tests must also be affordable to national malaria programs. The costs of the tests have fallen in the last few years; even so, many malaria control programs find that procuring the large numbers of test kits needed to ensure universal diagnosis is a considerable expense.
+
+Health-Worker Training: New methodologies require training. Health-care workers need training both in the new test methodology, as well as in using the results to treat patients. Available resources can limit the amount and quality of training available under real-world conditions.
+
+
+The development of resistance to drugs poses one of the greatest threats to malaria control and results in increased malaria morbidity and mortality. Resistance to currently available antimalarial drugs has been confirmed in only two of the four human malaria parasite species, Plasmodium falciparum and P. vivax. It is unknown if P. malariae or P. ovale has developed resistance to any antimalarial drugs

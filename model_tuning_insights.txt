@@ -1,0 +1,20 @@
+RF
+max depth: longest path between root node and leaf node
+min sample split: tells the decision tree in a random forest the minimum required number of observations in any given node in order to split it
+- default value is 2: meaning that if any terminal node has more than two observations and is not a pure node, we can split it further into subnodes
+max terminal / leaf nodes: sets a condition ton the splitting of the nodes in the tree and hence restricts the growth of the tree
+min samples leaf: specifies the minimum number of samples that should be present in the leaf node after splitting a node.
+n estimtaors: number of trees in the bag
+max samples: what fraction of the original dataset is given to any individual tree
+max features: max number of features provided to each tree in a random forest
+
+
+NBB: 
+consider bayes rule: P(X|y=1) = P(X, Y=1) * p(Y=1)
+but what if the numerator is zero?
+you do laplace smoothing: add alpha at the numerator and denominator
+as alpha
+we had (=) numbe rof training points with X present and y=1 / number of training points with y=1
+(=) 0 / number of training points where y=1
+now with alpha laplace smoothing:
+=0+alpha / number of training points where y=1 + number of classes labels in classifier * alpha

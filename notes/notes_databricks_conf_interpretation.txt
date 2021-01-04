@@ -1,0 +1,23 @@
+Unified Approach to Interpret Machine Learning Model SHAP + LIME - Layla Yang (Data bricks)
+
+- what is Ml : math formula applied to data points.
+model "learns" by aiming to reduce the error between its predictions and the labels (supervised)
+but what about interpretation? for linear models, it is pretty easy. Let's take an example: this disease that is correlated with age. 
+Young people have it less, with age it increases. Straight forward interpretation: there is positive correlation between the two variables.
+What about non linear problems? These constitute most of the problems at hand...
+accuracy interpretability tradeoff: performance vs. explanation interpretation . Remember: interpretability is for HUMANS... so accuracy and such are useful but not great.
+obviously trust in the model is important, also what if it messes up? this happens of course. We want to be able to know beforehand, or at least afterwards
+even if it doesnt mess up: we want to know why the model made the decision it did!
+also important : for people who don't understand: can give insight as to which features to collect more of, and which features to engineer in which way!
+Ml picks up bias in the data!
+
+tree interpreter: feature importance: measures how often and how much a feature was used in the model... but only GLOBAL average... 
+Also it is only "relative" importance meaning importance relative to the other features NOT relative to the target you want to predict...
+This is because basically it looks at "splits" between tree branches and the prediction these splits lead to .
+
+
+LIME: doesnt work out of the box on all models... learned on perturbations of the original datapoint + locally weighted regression
+SHAP values isaverage contribution of features which are predicting in different situation
+Can use LIME + Shapley values which is the KERNEL explainer (vs TREE explainer, DEEP explainer, GRADIENT explainer).
+SHAP guarantees local consistency, is better overall but computes a set of shapley values for each ROW  of the data... can take a long time
+should probably use spark for this ... 

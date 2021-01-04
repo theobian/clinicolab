@@ -1,0 +1,10 @@
+meeting_with_annie_04_12_2020
+
+TWO BUTTONS ON the platform, with and without hyperparameter tuning
+
+
+look into how good svc is, and also without being finetuned
+
+beware of "coding with buttons"
+
+

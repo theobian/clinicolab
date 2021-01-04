@@ -1,0 +1,68 @@
+Infectious Diseases Data Observatory: IDDO
+
+jonathan
+- supervised ML approach to determine best imputation methods
+preferred imputation method PER feature: better than chance
+- clustering approach to determine preferred imputation methods
+add missingness indicator for each row: not better than chance
+- most valuables feature to collect to improve missingness score
+build some scores: importance in prediction 
++ missingness relative to target feature
++ imputation error
++ absolute correlation with target feature
+--> large score = valuable to collect more of this feature
+: good results
+weighting of the score: equal
+before clustering, 
+tried different reduction techniques, 
+not just pca but tsne, mds, etc....
+
+
+curated dataset
+
+felix
+personalized collabortive Ml
+collaborative ML = allows different agents to train collectively 
+...without sharing data!
+federated learning: bilateral communication through 1 server
+decentralized learning: each participant sends messages to a subset of all participants
+it's possible to learn the same model with this.
+- individual data sets too small
+1 agent trains 1 model on their dataset
+weight erosion = update aggregation scheme: intervenes after the server
+... has received updates from each agent
+--> federated averaging
+euclidean distance between different agents' loss function level sets
+take the closest ones for update
+however distance depends on minibatch and how well the model is already performing
+--> weighted federated averaging
+dont include negative contributions by any agent
+for now: on "simple models" and "small, simple datasets"...
+room for improvement, and also room for issues.
+Why also focus on deep learning models : medical images....
+goal = model personalization
+
+what about multimodal data? ebola dataset
+ISEREC: defined standardized forms: 100k patient data something like that
+also 20k patient data with other forms
+also 60k patient data just came in but more like epidata (not enough information/features) just from SA i believe
+ALL of it = tabular
+but comes from all over the world... = great
+
+ibm: sanke diagram: SHOULD NOT BE USED for individual decision making!
+not enough evidence in using this type of tools (yet)
+us: guide decision making for individuals
+BUT you dont want to create a self-proving prophecy...
+YOU WANT risk stratification; use it as a suppport tool
+(this is your prior, etc)
+part of the issue might be that people develop tools that doctors dont really want / need
+--> really need to be in contact with a "population" of doctors not just the opinion of one or two
+--> would be way more reliable if you had uncertainty measures on the results
+however this tool = bayesian approach = doctors logic....
+it fits! just do it better, using ML and data science!
+of course its gonna be context based, just like doctors are
+--> personalized model approach is the way to go
+motivation for personalization: 
+how the model is developped and applied  = clinicians choice
+
+theo

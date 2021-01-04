@@ -1,0 +1,152 @@
+﻿DATASET SHIFT
+When applied to real data: ossies. e.g. spam
+either bc bias introduced in experiment
+or because the real conditions cant be reproduced
+or you need to approximate 
+etc
+all of these more or less = data shift:
+"joint distribution of inputs and outputs differs 
+between training and test stage"
+ml assumes that these distributions ARE the same...
+two main cases: datset shift, and covariate shift.
+"covariate (input) shift means that only 
+the input distribution changes, whereas the conditional distribution
+of the outputs fiven the inputs p(y|x) remains unchanged
+
+3 mains axes:
+- "how the capacity or complexity of the model affects its behavior in the face of dataset shift
+(are true conditional models and sufficiently rich models unaffected?
+- whether it is possible to find projections of the data that attenuate the differences
+in the training and test distributions while preserving predictability
+- whether new forms of importance reweighted likelihood and cross-validation
+can be devised which are robust to covariate shift"
+- "must relevant background knowledge be handcrafted for each application
+or can it be learned?"
+- Starting from a dreivation of the necessarty and sufficient conditions
+for equivalence of the Bayes classifiers of training and test distributions,
+Hein provides the conditions under which - asymptotically- sample selection
+bias does not affect the performance of a classifier"
+- "...focuses on algorithms to learn under the more specific setting of covariate shift, where
+the input distribution changes between training and test phases but the conditional distribution of
+outputs given inputs remains unchanged."
+
+
+REAL LIFE REASONS FOR DATASET SHIFT
+- simple covariate shift: only distributions of covariates x change and
+everything else is the same ; The most basic form of dataset shift occurs when the data is generated according
+to a model P(y|x)P(x) and where the distribution P(x) changes between training
+and test scenarios; A typical example of covariate shift occurs in assessing the risk of future events
+given current scenarios. Suppose the problem was to assess the risk of lung cancer
+in five years (y) given recent past smoking habits (x). In these situations we can
+be sure that the occurrence or otherwise of future lung cancer is not a causal factor
+of current habits. So in this case a conditional relationship of the form P(y|x) is
+a reasonable causal model to consider.1 Suppose now that changing circumstances
+(e.g., a public smoking ban) affect the distribution over habits x. How do we account
+for that in our prediction of risk for a new person with habits x∗?;1. Of course there are always possible confounding factors, but for the sake of this
+illustration we choose to ignore that for now. It is also possible the samples are not drawn
+independently and identically distributed due to population effects (e.g., passive smoking)
+but that too is ignored here
+- prior probability shift: when only the distribution over y changes and everything else stays the same
+- sample selection bias:when the dsitributions differ as a result of an unknown sample rejection process;
+Sample selection bias is a statistical issue of critical importance in numerous
+analyses. One particular area where selection bias must be considered is survey
+design. Sample selection bias occurs when the training data points {xi} (the sample)
+do not accurately represent the distribution of the test scenario (the population)
+due to a selection process for each item i that is (usually implicitly) dependent on
+the target variable yi.;Also the process of data cleaning can
+itself introduce selection bias. For example, in obtaining handwritten characters,
+completely unintelligible characters may be discarded. But it may be that certain
+characters are more likely to be written unclearly.; Sample selection bias is also the cause of the well-known phenomenon called
+“regression to the mean”. Suppose that a particular quantity of importance (e.g.,number of cases of illness X) is subject to random variations. However, that
+circumstance could also be affected by various causal factors.Suppose also that,
+across the country, the rate of illness X is measured, and is found to be excessive in
+particular locations Y. As a result of that, various measures are introduced to try
+to curb the number of illnesses in these regions. The rate of illnesses are measured
+again and, lo and behold, things have improved and regions Y no longer have such
+bad rates of illnesses. As a result of that change it is tempting for the uninitiated to
+conclude that the measures were effective. However, as the regions Y were chosen on
+the basis of a statistic that is subject to random fluctuations, and the regions were
+chosen because this statistic took an extreme value, even if the measures had no
+effect at all the illness rates would be expected to reduce at the next measurement
+precisely because of the random variations. This is sample selection bias because
+the sample taken to assess improvement was precisely the sample that was most
+likely to improve anyway. The issue of reporting bias is also a selection bias issue.
+“Interesting” positive results are more likely to be reported than “boring” negative
+ones.
+- imbalanced data : a form of deliberate dataset shift for computational or modeling convenience;
+The result of discarding data, though, is that the distribution in the training
+scenario no longer matches the imbalanced test scenario. However it is this imbalanced scenario that the model will be used for. Hence some adjustment needs to
+be made to account for the deliberate bias that is introduced; In a classification problem, the output of a conditional model is typically viewed
+as a probability distribution over class membership. The difficulty is that these
+probability distributions were obtained on training data that was biased in favor of
+rare classes compared to the test distribution. Hence the output predictions need
+to be weighted by the reciprocal of the known bias and renormalized in order to
+get the correct predictive probabilities. In theory these renormalized probabilities
+should be used in the likelihood and hence in any error function being optimized.
+In practice it is not uncommon for the required reweighting to be ignored, either
+through naivety, or due to the fact that the performance of the resulting classifier
+appears to be better. This is enlightening as it illustrates the importance of not
+simply focusing on the probabilistic model without also considering the decisiontheoretic implications. By incorporating a utility or loss function a number of things
+can become apparent. First, predictive performance on the rare classes is often more
+important than that on common classes. For example, in emergency prediction, we
+prefer to sacrifice a number of false positives for the benefit of another true positive.
+By ignoring the reweighting, the practitioner is saying that the bias introduced by
+the balancing matches the relative importance of false positives and true positives.
+Furthermore, introduction of a suitable loss function can reduce the problem where a
+classifier puts all the modeling effort into improving the many probabilities that are
+already nearly certain at the sacrifice of the small number of cases associated with
+the rarer classes. Most classifiers share a number of parameters between predictors
+of the rare and common classes. It is easy for the optimization of those parameters
+to be swamped by the process of improving the probability of the prediction of
+the common classes at the expense of any accuracy on the rare classes. However,
+the difference between a probability of 0.99 and 0.9 may not make any difference
+to what we do with the classifier and so actually makes no difference to the real
+results obtained by using the classifier, if predictive probabilities are actually going
+to be ignored in practice
+- domain shift: involves changes in measurement; Furthermore,
+there is often the possibility of changes in measurement units. All of these can cause
+dataset shift. We call this particular form of dataset shift domain shift. This term is
+borrowed from linguistics, where it refers to changes in the domain of discourse. The
+same entity can be referred to in different ways in different domains of discourse:
+for example, in one context meters might be an obvious unit of measurement, and
+in another inches may be more appropriate
+- source component shift: involves changes in strength of contributing components; Source component shift may be the most common form of dataset shift. In the most
+general sense it simply states that the observed data is made up from data from a number of different sources, each with its own characteristics, and the proportions
+of those sources can vary between training and test scenarios.; It would seem likely that most of the prediction problems that are the subject of
+study or analysis involve at least one of
+samples that could come from one of a number of subpopulations, between which
+the quantity to be predicted may vary;
+samples chosen are subject to factors that are not fully controlled for, and that
+could change in different scenarios; and
+targets that are aggregate values averaged over a potentially varying population.
+Each of these provides a different potential form of source component shift. The
+three cases correspond to mixture component shift, factor component shift, and
+mixing component shift respectively. These three cases will be elaborated further
+->mixture component shift
+-> factor component shift
+-> mixing component shift
+
+DATASET SHIFT AND TRANSFER LEARNING
+Dataset shift and transfer learning are closely related. Transfer learning considers
+the issue of how information can be taken from a number of only partially related
+training scenarios and used to provide better prediction in one of those scenarios
+than would be obtained from that scenario alone. Hence dataset shift consists of the
+case where there are only two scenarios, and one of those scenarios has no training
+targets. Multitask learning is also related. In multitask learning the response for a
+given input on a variety of tasks is obtained, and information between tasks is used
+to aid prediction. Multitask learning can be thought of a special case of transfer
+learning where there is some commonality in training covariates between tasks, and
+where the covariates have the same meaning across scenarios (hence domain shift
+is precluded).
+
+
+BINARY CLASSIFICATION UNDER SAMPLE SELECTION BIAS
+The reason for this might
+be that one can argue that sample selection bias only occurs due to a bad choice
+of the training set. We agree that this can be the reason for sample selection bias,
+but there are problems where even the most careful choice of the training set would
+not prevent sample selection bias
+
+
+WIKIPEDIA capacity
+Informally, the capacity of a classification model is related to how complicated it can be. For example, consider the thresholding of a high-degree polynomial: if the polynomial evaluates above zero, that point is classified as positive, otherwise as negative. A high-degree polynomial can be wiggly, so it can fit a given set of training points well. But one can expect that the classifier will make errors on other points, because it is too wiggly. Such a polynomial has a high capacity. A much simpler alternative is to threshold a linear function. This function may not fit the training set well, because it has a low capacity. This notion of capacity is made rigorous below.

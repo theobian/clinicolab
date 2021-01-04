@@ -1,0 +1,63 @@
+a journey through the disorderly world of diagnostic and prognostic models for covid19
+maastricht zoom meeting
+
+diagnostic and prognostic models:
+- support clinical decision-making for individual patients
+- combining and giving appropriate weights to several inputs (signs, symptoms, lab tests)
+
+if done right, could improve care and reduce costs:
+help allocate scare resources
+general population: 
+- who should shield
+- who should be prioritized for vaccination
+diagnosis:
+- who needs to undergo further diagnostic work-up
+- speed up CT interpretation
+prognosis: who do we admit to the ICU
+
+Poor prediction models can make things worse.
+miscalibration can make a mmodel clinically harmful;
+that is having a net benefit lower than that of either classifying all patients
+as positive or classifying all patients as negative
+
+
+review methods:
+systematic search: pubmed, embase arxiv, medrxiv, biorxiv
+- measurement procedures might vary between patients
+outcome:
+was the outcome determined appropriately
+was a pre-specified or standard outcome definition used
+were predictors excluded from the outcome definition
+was the outcome defined and determined in a similar way for all participants
+was the outcome determined without knowledge of predictor information
+was the time interval between predictor assessment and outcome determination appropriate
+
+analysis:
+were there a reasonable number of participants with the outcome
+were continuous and categorical predictors handled appropriately
+were all enrolled participants included in the analysis
+were participants with missing data handled appropriately
+was selection of predictors based on univariable analysis avoided
+were complexities in the data (e.g. censoring, competing risks, sampling of control participants) accounted for appropriately
+were relevant model performances measures evaluated appropriately
+were model overfitting and optimism in model performance accounted for
+do predictors and their assigned weights in the final model correspond to the results from the reported multivariable analysis
+
+IMPORTANT
+what about the "time" at which patients were controlled?
+you dont have the same symptoms throughout the disease....
+
+in a diagnostics study: too much time between predictor and outcome:
+in the case of an epidemics, you might become infected in the mean time!
+
+in this review, 22% papers were not properly evaluated
+out of 169 studies.
+
+performance metrics
+cutpoint si arbitrary, AUCs and 95CIs are better
+what about model calibration? plot flexible curve: observed probability of mortality vs expected probability of mortality
+
+should PLOT predicted probabilities overall 
+https://docs.healthcare.ai/
+
+Probast: analyze risk of bias of models?

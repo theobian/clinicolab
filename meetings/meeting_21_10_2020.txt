@@ -1,0 +1,23 @@
+meeting annie
+23/10/2020
+
+INSTALLATION GUIDE or change that up
+
+is it only running on local? put it on a website
+
+record a DEMO
+HOW TO GUIDE - needs to be short and concise and clear
+MAKE SURE you use the malaria  label + malaria test in the predictor
+SHOULD ReALLY FOCUS ON THE THING BELoW: ITS SUPER IMPORTANT FOR LOW RESROUCE CONTEXT DOCTORS
+MAKE SURE you use the snesitivity specificty graph from Annie's paper; explain the slider = threshold; you're sacrificing accuracy but you're getting sensitivity as you want it (i want to capture 10 people e..g because i can't afford more)
+	
+
+make sure I AM LEARNING STUFF
+
+models:
+ebola dataset: Ridha will clean the dataset.
+
+NEED TO DO: MAYBE DOESNT NEED TO BE INTEGRATED IN THE PLATFORM
+- 1) slider specificity thing
+- 2) general info and question mark thingies/ pimp out the platform
+- 3) 1 interpretaion method: e.g. LIME or SHAP

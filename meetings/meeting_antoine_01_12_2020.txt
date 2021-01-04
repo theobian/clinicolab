@@ -1,0 +1,34 @@
+in alge alge app logic
+
+plotly and django?
+for now d3js but should use mostly other libraries such as matplotlib
+
+data_handler.py
+def get data:
+if "regression" ??apply int?? why?
+
+logic_to_db.py
+def get model_diagnostic
+
+
+sklearn model selection train test split stratify
+
+models.py check pipeline from get_model_pipeline()
+
+
+send unlabeld_jan for platform comparison
+
+
+add SVM; different kernels as different models
+
+
+ale plots for categorical AND numerical
+
+model_eval.py def get_pdps() wtf
+
+for ALE : alibi library
+
+
+
+in django: have a nice looking table
+in django: how to add matplotlib
