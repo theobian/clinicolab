@@ -1,4 +1,6 @@
-﻿DATASET SHIFT
+﻿the mit book about dataset shift in ml
+
+DATASET SHIFT
 When applied to real data: ossies. e.g. spam
 either bc bias introduced in experiment
 or because the real conditions cant be reproduced

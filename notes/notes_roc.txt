@@ -1,0 +1,264 @@
+Basic Principles of ROC Analysis, Metz, 1978
+
+- accuracy sucks.. but specificity and sensitivity rely on the selection of an arbitrary threshold....
+- practician cant be expected to master all of the subtleties of evaluation analysis
+
+
+accuracy: fraction of cases for which the clinician is correct. can be misleading, especially for rare diseases
+disease prevalence affects this number strongly of course.
+can it be useful for comparison of diagnostic techniques? when we know disease prevalence and it is fixed?
+well again, two models can have the same accuracy but behave differently in the numbers it got right and wrong
+if a model got most errors on FP and the other on on FN they shouldnt be used in the same context...
+
+sensitivity is the accuracy for actually positive cases = true positive fraction
+specificity is the accuracy for actually negative cases = true negative fraction
+
+when comparing models, if you look at specificity and sensitivity : by selecting different decision thresholds,
+you can change the values...
+
+so force the decision threshold to vary. we keep FPF and TPF because they can determine all four fractions
+- TPF
+- FPF=1-TNF
+- TNF
+- FNF=1-TPF
+- disease prevalence D+
+- accuracy = TPF*D+ + TNF*D=
+
+a conventional ROC curve: describes the compromises that can be made between TPF and FPF as a decision threshold is varied
+if disease prevalence is low then FPF must be kept small: otherwise almost all positive decisions will be FPs
+if consequences of a false positive decision are horrible, FPF must be kept small.
+however if disease prevalence is high then or the need of finding positive cases is of importance then you should keep TPF high (and so FPF high)
+
+for diagnostic tests: roc curve describes the decision performance of an observer-test combination. 
+
+
+
+
+
+The Relationship of Temporal Resolution to Diagnostic Performance for Dynamic Contrast Enhanced (DCE) MRI of the Breast, El Khouli et al., 2009
+. The area under the ROC curve (AUC) results were considered excellent for AUC values between 0.9-1, good for AUC values between 0.8-0.9, fair for AUC values between 0.7-0.8, poor for AUC values between 0.6-0.7 and failed for AUC values between 0.5-0.6.(15-17) 
+
+
+
+A Comparative Analysis of Machine/Deep Learning Models for Parking Space Availability Prediction
+Awan et al., 2020
+
+ML and DL often applied.
+outcome depends on dataset type and application domain considered
+ basically: santander parking dataset, and regardless of data set size: less complex algorithms perform better (DT, RF, KNN) than complex ones (MLP) in terms of accuracy
+
+
+objectives:
+- identification of the best performing among well known and generally used ones, AI/ML algorithms for the problem at hand
+	- analysis and evaluation of various ML / DL models for the problem of predicting parking space availability
+	- analysis assessment of the ensemble learning approach and its comparison with other ML / DL models
+	- recommendation of the most appropriate ML/ DL model to predict parking space availability
+- recommending top k parking spots wrt distances between current position of vehicle and available parking spots
+- application of the algorithms in order to demonstrate how satisfactory prediction of availability of parking spaces can be achieved using real data from Santander
+
+
+overview:
+MLP: most well known NN
+input layer, one + hidden layers, output layer.
+each layer: multple hidden units (nodes / neurons)
+the value of any hidden unit n in any hiden layer is computed as such;
+h_n = a * (sum from k=1 to N of (i_K * W_k,n)
+with h_n the output value of any hidden unit n in any hidden layer
+a represents the activation function
+
+activation funciton makes the decision related to the activation of a specific hidden unit.
+N is the total number of input nodes
+i_K is the value of input node K being fed to hidden unit h_n
+it can be a node in any layer or in the input layer
+W_K, n represents the weight of unit h_n, it is a measure of the connection strength between an input node and a hidden unit
+
+
+should include formulas of activation functions such as ReLU (max(0,value). 
+Relu is good for grid search approach. sigmoid and tanh cant deal with vanishing gradient....relu can.
+
+should include image of the MLP architecture
+
+knn: 
+simpe shit: classification based on distance.
+compute distance (depends on the distance metric). compute distance between observation and its K nearest neighbors
+look at the majority class and have this observation be of this class
+distances: manhattan, euclidean. euclidean is most popular
+
+decision trees and random forests
+DT: build a tree where each branch is a set of conditions (rules) starting from root node
+splits = internal points
+leaves = final terminal nodes containing homogeneous classes (can be heterogeneous actually depending on criteria? at least for RF yes)
+
+compute entropy with X training data, N total obs number, C corresponding class labels:
+E(X) = - sum from j-1 to K of (freq(C_j, X)/N * log_2 (freq(C_j,X)/n))
+where the freq(C_J, X)/n is the class c_j 's occurence probability in X
+use information gain to perform node splits
+
+include graphic
+
+RF: multiple DTs
+each tree sets conditional features differently
+when a sample arrives to a root node: forwarded to all sub trees. The class of the majority is assigned to that sample
+
+
+ensemble learning / voting classifier:
+just mix a bunch of shit up: MLP, KNN, DT, RF to solve it
+train each model
+then predict a class label
+then vote on each sample (hard or soft voting - majority or probability averaging)
+should also include image
+
+
+
+hyper parameters of ML / DL techniques:
+
+MLP: activation, early stopping =true, hidden layer sizes =5,5,5 -- 3 layers, five neurons in each
+lr = adaptive
+lrinit = 0.001
+solver = sgd
+tol = 0.001
+
+
+knn: nneighbors =11
+metric = euclidean
+weights = uniform
+
+DT : max depth = 100
+criterion = entropy
+min samples leaf = 5
+
+RF: max depth = 100
+criterion = entropy
+min samlpes leaf = 1
+n estimators = 200
+
+
+voting classifiers:
+estimators = the different kinds of models in your  ensemble
+voting = soft
+weights = 1,1,1,2 per model
+
+
+
+evaluation metrics:
+
+use some shit and also: k-fold cross val
+
+precision: recall f1, accuracy, k fold cross val: 5 folds
+
+can also vary thresholds
+
+
+training data evaluation
+
+the size of training dat can significantly influence the performances of an ML/DL model
+
+so look at how the size of the training data affected the models
+
+
+
+conclusion:
+take a look at the most well known and used algorithms but obivously you can use whichever lol
+
+
+
+
+
+
+
+Comparison of Deep Learning With Multiple Machine Learning Methods and Metrics Using Diverse Drug Discovery Datasets
+Korotcov et al., 2017
+
+LR and svm are basically 0 hidden layer NNs...
+shallow: if 1-2 hidden layers, otherwise deep
+usually DL for unsupervised or for noisy data
+
+should specify software modules probably (sklearn python conda etc), might want to spec the computer but i used several different ones lol
+
+NV classifiers are just so fast and widely used. buts its not great for estimating, best for classification.
+probability outputs are usually not great
+
+LR: l2 penalty between 1e-5 and 1e-1 in log scale
+
+
+adaboost DT: 100 estimators, 0.9 lr
+
+rf: max depth tree = 5, balanced class weights
+
+svm: quite effective in high dim spaces
+kernels: linear, rbf, C=1,10,100; gamma = 1e-2, 1e-3, 1e-4
+c trades off misclassification of training examples against simplicity of decision surface
+low c maeks decision surface smooth; high C aims at classifying all examples correctly
+
+
+DNN
+l2 norm and drop out regularization to prevent overfitting
+3 hidden layers
+sgd, adam , nadam
+lr= 0.05, 0.025, 0.01, 0.001
+network weight initialization: uniform, lecun uniform, normal, glorot normal, he normal, should try savier prob?
+hidden layers activation functions: relu, tanh, leakyrelu, srelu
+outpu function: softmax, softplus, sigmoid
+l2 reg: 0.05, 0.01, 0.005, 0.001, 0.0001
+dropout reg: 0.2, 0.3, 0.5, 0.8
+number of nodes in hidden layers: 512, 1024, 2048, 4096
+
+
+metrics: look into cohen's kappa (takes into account chance agreement) and matthews correlation coefficient
+mcc: |{\text{MCC}}|={\sqrt  {{\frac  {\chi ^{2}}{n}}}}
+{\displaystyle {\text{MCC}}={\frac {{\mathit {TP}}\times {\mathit {TN}}-{\mathit {FP}}\times {\mathit {FN}}}{\sqrt {({\mathit {TP}}+{\mathit {FP}})({\mathit {TP}}+{\mathit {FN}})({\mathit {TN}}+{\mathit {FP}})({\mathit {TN}}+{\mathit {FN}})}}}}
+
+use radar plots
+https://plotly.com/python/radar-chart/
+
+
+
+cohen s kappa better than auc
+{\displaystyle \kappa \equiv {\frac {p_{o}-p_{e}}{1-p_{e}}}=1-{\frac {1-p_{o}}{1-p_{e}}},\!}
+p0 is the accuracy (agreement among raters); pe the hypothetical probability of chance agreement (using observed data to calculate the probabilities of each observer randomly seeing each category)
+
+
+of course further assessment requires larger datasets and many more datasets!
+
+
+
+
+SVM-CART for Disease Classification
+
+Reynolds et al., 2020
+
+dTrees and Svm are popular for complex data in biomed research
+
+support vector machines are non-probabilistic supervised learning procedures that create a multi-dimensional hyperplane to partition the covariate space into two groups allowing for classification
+
+
+
+
+in growing a tree, the natural question that arises is how and why a parent node is split into daughter nodes
+trees use binary splits, phrased in terms of the covariates, that partition the covariate space recursively
+each split depends upon the value of a single covariate
+the partitioning is intended to increase wihtin-node homogeneities in the two daughter nodes
+the extent of node homogeneity is measured using an impurity function 
+potential splits for each of the covariates are evaluated, and the covariate and split value resulting in the greatest reduction in impurity is chosne
+
+
+
+svm create separating hyperplanes to give class-level predictions. 
+the svm hyperplane takes a small or large number of covariates to create a hyperplane that can be used to classify patients into outcome groups
+
+if y_i the binary outcome for patient i, x_i the p x i vector of covariates for the ith patient
+x the p x n matrix of continuous variates
+svm creates a hyperplane of the form: H = x: w'x + b = 0
+with w and b the set of optimal weights corresponding to each continuous covarite that construct the hyperplane
+svms create the hyperplane by maximizing the margin between the nearest p-dimensional data points on each side of the hyperplane
+for non linearly separable data: use a soft-margin hyperplane (often the case in medical data - most real world data really)
+the optimal sotf-margin hyperplane is found by minimizing the following objective function:
+(soft margin hyperplane which introduces slack variables to penalize classification errors based on predetermined weights)
+objective fct:
+min(w,b,phi) of 0.5 * ||w||^2 + C/n * sum(i=1 to n) phi_i
+
+
+
+values of C: 10^-5 to 10^4
+
+while linear svms provided a simple extension in our case, using more intricate kernel function svm classifiers at each node has the potential to provide a powerful boost in ceratin scenarios.
