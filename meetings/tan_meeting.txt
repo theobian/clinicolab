@@ -1,0 +1,15 @@
+tan notes
+
+meeting
+
+
+likelihood ratio
+sensitivity specificity odds ratio
+relative risk odds ratio and then associate it with feature importance
+you need to understand the individual value of these predictors 
+
+unadjusted prediction value of predictors then have multivariate analysis and see how the model adjusted to that: then have adjusted odds ratio 
+un adjusted and adjusted odds ratio and p value
+individual predictors = features
+give information on how the features are: categorical, numerical, etc
+can i dichotomize this? can i categorize this? before using it on the model.
